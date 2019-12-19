@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sy11-3</title>
+	<style type="text/css">
+		*{margin: 0px;padding: 0px;}
+		#wrap{
+			position: relative;
+			width: 640px;
+			height: 400px;
+			margin: auto;
+			border: 2px solid #000;
+			cursor: pointer;
+			margin-top: 100px;
+		}
+		#wrap img{
+			position: absolute;
+			display: none;
+		}
+		#wrap .on{
+			display: block;
+		}
+	</style>
+		
+</head>
+
+<body>
+	<div id="wrap">
+		<img id="img1" class="on" src="images/photo3.jpeg" width="640" height="400" alt="">
+		<img id="img2" src="images/photo4.jpeg" width="640" height="400" alt="">
+	</div>
+	<script>
+		let oImg1 = document.getElementById("img1"),
+			oImg2 = document.getElementById("img2");
+			oImg1.onclick = function(){
+				oImg1.className = "";
+				oImg2.className = "on";
+			}
+			oImg2.onclick = function(){
+				oImg2.className = "";
+				oImg1.className = "on";
+			}
+	</script>
+</body>
+</html>
